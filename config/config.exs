@@ -8,7 +8,10 @@
 import Config
 
 config :calendlex,
-  ecto_repos: [Calendlex.Repo]
+  ecto_repos: [Calendlex.Repo],
+  owner: %{
+    name: "Bigardone"
+  }
 
 # Configures the endpoint
 config :calendlex, CalendlexWeb.Endpoint,
