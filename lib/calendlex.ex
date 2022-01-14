@@ -11,4 +11,6 @@ defmodule Calendlex do
   defdelegate get_event_type_by_slug(slug),
     to: Calendlex.EventType.Repo,
     as: :get_by_slug
+
+  defdelegate build_time_slots(date, time_zone, duration), to: Calendlex.TimeSlots, as: :build
 end

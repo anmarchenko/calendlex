@@ -11,7 +11,9 @@ config :calendlex,
   ecto_repos: [Calendlex.Repo],
   owner: %{
     name: "Bigardone",
-    time_zone: "UTC"
+    time_zone: "Europe/Madrid",
+    day_start: 9,
+    day_end: 19
   }
 
 # Configures the endpoint
