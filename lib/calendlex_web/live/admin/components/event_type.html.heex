@@ -1,0 +1,16 @@
+<div class={"relative flex flex-col p-4 mb-2 text-gray-400 bg-white cursor-pointer rounded-md shadow-sm hover:shadow-md border-t-4 border-#{@event_type.color}-500"}>
+  <header class="mb-4">
+    <h3 class="mb-1 text-xl text-gray-800"><%= @event_type.name %></h3>
+    <div class="mb-2 text-sm"><%= @event_type.duration %> mins</div>
+    <div><%= @event_type.description %></div>
+    <span class="border-blue-500 border-pink-500 border-purple-500" />
+  </header>
+  <div class="flex-1">
+    <%= live_redirect to: Routes.live_path(@socket, CalendlexWeb.EventTypeLive, @event_type.slug), class: "text-blue-500 hover:underline" do %>View booking page<% end %>
+  </div>
+  <footer class="flex items-center h-16 px-4 mt-4 -m-4 text-sm border-t border-gray-200">
+    <button class="text-blue-500">
+      <i class="far fa-clone"></i> Copy link
+    </button>
+  </footer>
+</div>
